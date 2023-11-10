@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to the #{title}
+    ul
+    each message in messages
+      li
+        p= message.text
+        p Written by #{message.user} on #{message.added.toLocaleString()}
+  br
+  br
+  a(href="/new") Write New Message
